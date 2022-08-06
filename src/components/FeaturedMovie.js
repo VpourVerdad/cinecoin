@@ -1,4 +1,5 @@
 import React from 'react';
+import "./FeaturedMovie.css"
 
 function FeaturedMovie({ films }) {
     console.log("film", films);
@@ -9,14 +10,18 @@ function FeaturedMovie({ films }) {
     console.log(filmGenre)
 
     return (
-        <section className="featured">
+        <section className="featured" style={{
+            backgroundSize : "cover",
+            backgroundImage : `url(https://image.tmdb.org/t/p/original${films.backdrop_path})`,
+            backgroundPosition : "center",
+        }}>
             <div className="featured--vertical">
                 <div className="featured--horizontal">
                     <div className="featured--name">
                         {films.title}
                     </div>
                     <div className="featured--info">
-                        <div className="featured--score">{films.vote_average}</div>
+                        <div className="featured--score">{films.vote_average.toFixed(2)}</div>
                         <div className="featured--year">{films.release_date}</div>
                     </div>
                     <div className="featured--description">
@@ -27,11 +32,12 @@ function FeaturedMovie({ films }) {
                             Lecture
                         </a>
                         <a href="/" className="featured--myListButton">
-                            Ma Liste
+                            + Ma Liste
                         </a>
                     </div>
                     <div className="featured--genres">
-
+                        {" "}
+                        <strong>Genres : </strong>{filmGenre.join(', ')}
                     </div>
                 </div>
             </div>

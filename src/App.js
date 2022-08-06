@@ -3,10 +3,11 @@ import ApiMovie from "./ApiMovie";
 import './App.css';
 import MovieSection from "./components/MovieSection";
 import FeaturedMovie from "./components/FeaturedMovie";
+import Header from "./components/Header";
 
 function App() {
     const [movieList, setMovieList] = useState([]);
-    const [featuredData, setFeaturedData] = useState([null]);
+    const [featuredData, setFeaturedData] = useState(null);
 
     useEffect(() => {
         const loadAllMovies = async () => {
@@ -28,6 +29,7 @@ function App() {
 
     return (
       <div className="page">
+          <Header />
           {featuredData && <FeaturedMovie films={featuredData} />}
         <section className="lists">
             {movieList.map((item, key) => (
