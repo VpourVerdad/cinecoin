@@ -1,13 +1,12 @@
 import React from 'react';
 import "./FeaturedMovie.css"
+import convertDate from '../Utilities/convertDate.js'
 
 function FeaturedMovie({ films }) {
-    console.log("film", films);
     let filmGenre = []
     for (let genre of films?.genres) {
         filmGenre.push(genre.name)
     }
-    console.log(filmGenre)
 
     return (
         <section className="featured" style={{
@@ -21,8 +20,8 @@ function FeaturedMovie({ films }) {
                         {films.title}
                     </div>
                     <div className="featured--info">
-                        <div className="featured--score">{films.vote_average.toFixed(2)}</div>
-                        <div className="featured--year">{films.release_date}</div>
+                        <div className="featured--score">Note : {films.vote_average.toFixed(2)}</div>
+                        <div className="featured--year">Sortie cinéma : {convertDate(films.release_date)}</div>
                     </div>
                     <div className="featured--description">
                         {films.overview}

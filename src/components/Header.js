@@ -11,7 +11,7 @@ function Header() {
                 </a>
             </div>
             <div className="header--title">
-                CinéCoin
+                <span className="title-first-part">Ciné</span><span className="title-second-part">Coin</span>
             </div>
         </header>
     )

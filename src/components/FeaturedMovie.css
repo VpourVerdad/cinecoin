@@ -23,6 +23,7 @@
 .featured--name {
     font-size: 70px;
     font-weight: bold;
+    color: #FA7211;
 }
 
 .featured--info {
@@ -37,18 +38,18 @@
 }
 
 .featured--score {
-    color: green;
+    color: #FECC00;
 }
 
 .featured--description {
     margin-top: 15px;
     font-size: 20px;
-    color: #999;
+    color: #cdcdcd;
     max-width: 70%;
 }
 
 .featured--button {
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .featured--watchButton, .featured--myListButton {
@@ -64,12 +65,12 @@
 }
 
 .featured--myListButton {
-    background-color: #333;
-    color: #fff;
+    background-color: #FA7211;
+    color: #000;
 }
 
 .featured--watchButton {
-    background-color: #fff;
+    background-color: #FECC00;
     color: #000;
 }
 
@@ -78,9 +79,9 @@
 }
 
 .featured--genres {
-    margin-top: 15px;
+    margin-top: 25px;
     font-size: 18px;
-    color: #999;
+    color: #CDCDCDFF;
 }
 
 @media (max-width: 760px) {
